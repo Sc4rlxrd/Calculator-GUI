@@ -17,7 +17,7 @@ public class Main {
             num2= JOptionPane.showInputDialog("Informe o segundo valor: ");
             double value2 = Double.parseDouble(num2);
 
-            option1 = JOptionPane.showInputDialog("Tell which arithmetic operation you want: \n [1] SUM\n [2] SUBTRACTION\n [3] MULTIPLICATION\n [4] DIVISION\n [5] REST OF DIVISION\n [6] POTENTIATION\n [7] STOP ");
+            option1 = JOptionPane.showInputDialog("Tell which arithmetic operation you want: \n [1] SUM\n [2] SUBTRACTION\n [3] MULTIPLICATION\n [4] DIVISION\n [5] REST OF DIVISION\n [6] POTENTIATION\n[7] DOBRO\n[8] TRIPLO\n[9] RAIZ\n[10] STOP ");
             option = Integer.parseInt(option1);
 
             switch (option){
@@ -49,7 +49,17 @@ public class Main {
                     text = JOptionPane.showInputDialog("Result: " , result);
                 }
                 case 7->{
-                    System.out.println("ESTAMOS ENCERRANDO OS PROCESSOS..");
+                    result = Operates.dobro(Double.parseDouble(num1));
+                    text = JOptionPane.showInputDialog("Result: " , result);
+                }
+                case 8 ->{
+                    result = Operates.triplo(Double.parseDouble(num1));
+                    text = JOptionPane.showInputDialog("Result: " , result);
+                }
+                case 9 ->{
+                    result = Operates.raiz(Integer.parseInt(num1));
+                    text = JOptionPane.showInputDialog("Result: " , result);
+
                 }
                 default -> {
                     System.out.println("DESCULPA OPÇÃO INVALIDA");
@@ -57,7 +67,7 @@ public class Main {
                     System.out.println("CONTATO: guilherme2suporte@gmail.com");
                 }
             }
-        }while(7 != option);
+        }while(10 != option);
 
 
 
